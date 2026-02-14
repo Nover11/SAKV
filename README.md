@@ -1,4 +1,3 @@
-# SAKV
 # SAKV: Semantic-Aware KV Cache Compression for Long-Context LLM Inference
 
 Official implementation of **SAKV**, a semantic-aware KV cache compression framework for long-context large language model (LLM) inference.
@@ -58,7 +57,6 @@ Pri(l) = 1 - ACS(l)
 - Allocation:
 B_l = β * (B / L) + (1 - β) * B * Pri(l) / sum(Pri)
 
-
 This ensures:
 - Redundant layers get smaller budgets
 - Information-rich layers retain more KV states
@@ -83,7 +81,6 @@ This hybrid strategy combines:
 ## 📂 Project Structure
 
 ```text
-.
 ├── experiments/
 │   └── LongBench/
 │       ├── eval.py           # Evaluation script
@@ -99,7 +96,6 @@ This hybrid strategy combines:
 ├── __init__.py
 └── README.md
 
-
 🔧 Installation
 git clone <your_repo_url>
 cd SAKV
@@ -110,15 +106,8 @@ PyTorch 2.x
 NVIDIA A100 (40GB)
 FlashAttention-2 (recommended)
 
-
-
 ▶️ Running LongBench Evaluation
 cd experiments/LongBench
-python pred_sakv.py \
-  --model mistral-7b \
-  --cache_budget 1024 \
-  --tau 0.75 \
-  --beta 0.5 \
-  --gamma 0.3
+python pred_cake.py --model mistral-0.3-7b-32k --compress --cascading --pred_name pred_result --device 0 --cache_size 1024 --tau 0.75 --beta 0.5  --gamma 0.3
 Then evaluate:
 python eval.py
