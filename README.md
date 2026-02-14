@@ -97,7 +97,7 @@ This hybrid strategy combines:
 └── README.md
 
 🔧 Installation
-git clone <your_repo_url>
+git clone https://github.com/Nover11/SAKV.git
 cd SAKV
 pip install -r requirements.txt
 Tested on:
