@@ -96,15 +96,6 @@ This hybrid strategy combines:
 ├── __init__.py
 └── README.md
 
-🔧 Installation
-git clone https://github.com/Nover11/SAKV.git
-cd SAKV
-pip install -r requirements.txt
-Tested on:
-Python 3.10+
-PyTorch 2.x
-FlashAttention-2 (recommended)
-
 ▶️ Running LongBench Evaluation
 cd experiments/LongBench
 python pred_cake.py --model mistral-0.3-7b-32k --compress --cascading --pred_name pred_result --device 0 --cache_size 1024 --tau 0.75 --beta 0.5  --gamma 0.3
