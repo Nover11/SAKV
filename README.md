@@ -103,7 +103,6 @@ pip install -r requirements.txt
 Tested on:
 Python 3.10+
 PyTorch 2.x
-NVIDIA A100 (40GB)
 FlashAttention-2 (recommended)
 
 ▶️ Running LongBench Evaluation
