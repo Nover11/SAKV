@@ -11,7 +11,7 @@ The method is described in the paper:
 
 ---
 
-## 🚀 Motivation
+## Motivation
 
 In long-context inference, the **KV cache** becomes the dominant GPU memory bottleneck.
 
@@ -32,11 +32,11 @@ Therefore, SAKV:
 
 ---
 
-## 🧠 Method Overview
+## Method Overview
 
 SAKV integrates into the **prefill stage** of LLM inference and contains three main components:
 
-### 1️⃣ Sentence-Level Redundancy Analysis
+### Sentence-Level Redundancy Analysis
 
 - Split input into sentences
 - Compute sentence embeddings via mean pooling of hidden states
@@ -47,7 +47,7 @@ High ACS → high redundancy → lower memory allocation
 
 ---
 
-### 2️⃣ Layer-Wise Memory Budget Allocation
+### Layer-Wise Memory Budget Allocation
 
 Total KV cache budget \( B \) is dynamically partitioned:
 
@@ -63,7 +63,7 @@ This ensures:
 
 ---
 
-### 3️⃣ Semantic-Aware KV Cache Eviction
+### Semantic-Aware KV Cache Eviction
 
 Eviction occurs at token level but is guided by sentence redundancy:
 
@@ -78,7 +78,7 @@ This hybrid strategy combines:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── experiments/
@@ -97,6 +97,7 @@ This hybrid strategy combines:
 └── README.md
 
 ▶️ Running LongBench Evaluation
+Currently tested with transformers==4.44.2
 cd experiments/LongBench
 python pred_cake.py --model mistral-0.3-7b-32k --compress --cascading --pred_name pred_result --device 0 --cache_size 1024 --tau 0.75 --beta 0.5  --gamma 0.3
 Then evaluate:
