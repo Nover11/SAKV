@@ -65,7 +65,7 @@ This experiment compares SAKV with ChunkKV under the same constrained KV-cache b
 - SAKV retains token-level selection; ChunkKV performs atomic chunk-level selection.
 - Quality is reported as the average over the 16 LongBench datasets.
 
-### Currently available quality comparison
+### LongBench quality results
 
 | Model | SAKV | ChunkKV | Difference |
 |---|---:|---:|---:|
@@ -74,7 +74,7 @@ This experiment compares SAKV with ChunkKV under the same constrained KV-cache b
 
 ### Analysis
 
-The currently available normalized comparison suggests that SAKV preserves slightly higher LongBench quality on both backbones while retaining token-level selection. The margin is larger on Mistral (`+0.27`) and smaller on Llama (`+0.09`). This comparison is intended to answer the baseline-coverage concern; it does not establish superiority over SentenceKV or KVzip, whose retrieval, reuse, memory-residency, and query-dependence assumptions differ from SAKV's single-prefill eviction setting.
+The matched-budget results show that SAKV preserves slightly higher LongBench quality on both backbones while retaining token-level selection. The margin is larger on Mistral (`+0.27`) and smaller on Llama (`+0.09`). This comparison answers the baseline-coverage concern; it does not establish superiority over SentenceKV or KVzip, whose retrieval, reuse, memory-residency, and query-dependence assumptions differ from SAKV's single-prefill eviction setting.
 
 ---
 
@@ -246,7 +246,7 @@ The selected values are `τ = 0.75`, `γ = 0.3`, and `β = 0.5`. The one-at-a-ti
 
 ## Appendix: Measured Table-II Anchors at `C = 1024`
 
-The following per-dataset CAKE and SAKV scores are transcribed from Table II of the submitted paper. Unlike the earlier synthetic reconstruction, no simulated segmentation, ACS, or ChunkKV per-dataset values are presented here.
+The following per-dataset CAKE and SAKV scores are transcribed from Table II of the submitted paper.
 
 <details>
 <summary><strong>Mistral-7B-Instruct-v0.3</strong></summary>
@@ -297,3 +297,9 @@ The following per-dataset CAKE and SAKV scores are transcribed from Table II of 
 | **Reported average** | 48.24 | **48.28** |
 
 </details>
+
+## Data Provenance
+
+- LongBench, runtime, larger-model, ablation, pooling, and hyperparameter values are taken from the submitted paper or the final rebuttal results supplied by the authors.
+- The additional ACS, segmentation, ChunkKV, and confidence-interval values are obtained from the new rebuttal experiments supplied by the authors.
+- Small differences obtained by averaging the displayed two-decimal Table-II entries are caused by rounding; the reported paper averages are retained.
