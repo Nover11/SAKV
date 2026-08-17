@@ -10,6 +10,13 @@ The method is described in the paper:
 **“SAKV: Semantic-Aware KV Cache Compression for Long-Context Large Language Model Inference”**
 
 ---
+## 🟥 ICDE Rebuttal
+
+> [!IMPORTANT]
+> Additional experiments and analyses addressing the reviewers' comments are provided in the following document:
+>
+> **➡️ [Rebuttal to ICDE — Additional Experiments and Analyses](./REBUTTAL_ICDE.md)**
+---
 
 ## Motivation
 
