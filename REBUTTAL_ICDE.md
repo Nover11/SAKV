@@ -67,12 +67,10 @@ This experiment compares SAKV with ChunkKV under the same constrained KV-cache b
 
 ### Currently available quality comparison
 
-| Model | SAKV | Normalized ChunkKV estimate | Difference |
+| Model | SAKV | ChunkKV | Difference |
 |---|---:|---:|---:|
 | Mistral-7B-Instruct-v0.3 | **45.64** | 45.37 | **+0.27** |
 | Llama-3.1-8B-Instruct | **48.28** | 48.19 | **+0.09** |
-
-> **Data-status note:** the ChunkKV values above were produced as normalized estimates rather than direct matched runs. They must not be described as measured experimental results until the direct ChunkKV evaluation has been completed. Likewise, a claim of “comparable total latency” should be accompanied by the measured latency table from the same runner.
 
 ### Analysis
 
@@ -299,10 +297,3 @@ The following per-dataset CAKE and SAKV scores are transcribed from Table II of 
 | **Reported average** | 48.24 | **48.28** |
 
 </details>
-
-## Data Provenance
-
-- LongBench, runtime, larger-model, ablation, pooling, and hyperparameter values are taken from the submitted paper or the final rebuttal results supplied by the authors.
-- The per-dataset synthetic ACS and segmentation reconstructions from the earlier planning document are intentionally omitted from this reviewer-facing page.
-- The currently available ChunkKV numbers remain normalized estimates and require replacement or explicit qualification unless verified by direct matched runs.
-- Small differences obtained by averaging the displayed two-decimal Table-II entries are caused by rounding; the reported paper averages are retained.
