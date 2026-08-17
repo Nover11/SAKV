@@ -22,10 +22,10 @@ This page provides the additional experiments and clarifications referenced in o
 
 ## 🟥 Experiment 1: ACS Validity Controls
 
-This experiment evaluates whether the observed layer-wise ACS trend captures meaningful cross-unit semantic redundancy rather than only the common geometry or anisotropy of hidden representations.
-
 **For review comments:** R2D2 and R4W1D1  
 **Refer to rebuttal section:** Section 1, *ACS Validity*
+
+This experiment evaluates whether the observed layer-wise ACS trend captures meaningful cross-unit semantic redundancy rather than only the common geometry or anisotropy of hidden representations.
 
 ### Experimental setup
 
@@ -53,10 +53,10 @@ All three conditions exhibit a shallow-to-deep change because they share the sam
 
 ## 🟥 Experiment 2: ChunkKV Baseline Comparison
 
-This experiment compares SAKV with ChunkKV under the same constrained KV-cache budget to evaluate quality preservation and selection granularity.
-
 **For review comments:** R2W2, W3D3, R3W2, and R4W3D3  
 **Refer to rebuttal section:** Section 3, *Novelty and Baselines*
+
+This experiment compares SAKV with ChunkKV under the same constrained KV-cache budget to evaluate quality preservation and selection granularity.
 
 ### Matched comparison protocol
 
@@ -82,10 +82,10 @@ The currently available normalized comparison suggests that SAKV preserves sligh
 
 ## 🟥 Experiment 3: Segmentation Robustness
 
-This experiment evaluates whether SAKV remains effective when dataset-aware segmentation is replaced by generic, fixed-length, corrupted-boundary, or random-boundary alternatives.
-
 **For review comments:** R3W1 and R4W2D2  
 **Refer to rebuttal section:** Section 4, *Segmentation Robustness*
+
+This experiment evaluates whether SAKV remains effective when dataset-aware segmentation is replaced by generic, fixed-length, corrupted-boundary, or random-boundary alternatives.
 
 ### Experimental setup
 
@@ -112,10 +112,10 @@ The generic splitter nearly matches the dataset-aware splitter, with gaps of onl
 
 ## 🟥 Experiment 4: Unified Implementation and TTFT
 
-This experiment measures the additional TTFT introduced by SAKV relative to CAKE when semantic-unit pooling and pairwise comparison are fully included under the same inference configuration.
-
 **For review comments:** R3W4 and R4W6D6  
 **Refer to rebuttal section:** Section 5, *System Implementation and Latency*
+
+This experiment measures the additional TTFT introduced by SAKV relative to CAKE when semantic-unit pooling and pairwise comparison are fully included under the same inference configuration.
 
 ### Implementation setting
 
@@ -152,10 +152,10 @@ The N-dependent semantic-unit processing cost appears in TTFT, as intended. Acro
 
 ## 🟥 Experiment 5: Statistical Reliability and Model Scaling
 
-This experiment evaluates whether SAKV's modest improvements on Llama3.1 are statistically distinguishable from run-to-run variation and whether the gains persist on larger model backbones.
-
 **For review comments:** R2W1D1 and R4W4D4  
 **Refer to rebuttal section:** Section 6, *Performance Improvement*
+
+This experiment evaluates whether SAKV's modest improvements on Llama3.1 are statistically distinguishable from run-to-run variation and whether the gains persist on larger model backbones.
 
 ### Paired repeated-run analysis
 
@@ -181,10 +181,10 @@ Both paired confidence intervals exclude zero, showing that the Llama3.1 improve
 
 ## 🟥 Experiment 6: Ablations, Pooling Robustness, and Hyperparameters
 
-This experiment isolates the contribution of each SAKV component and evaluates robustness to the semantic-unit pooling operator and hyperparameter values.
-
 **For review comments:** R2D5, R3W3, and R4W5D5  
 **Refer to rebuttal section:** Section 7, *Ablation Study*
+
+This experiment isolates the contribution of each SAKV component and evaluates robustness to the semantic-unit pooling operator and hyperparameter values.
 
 ### 6.1 Component definitions and corrected ablation labels
 
