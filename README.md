@@ -85,22 +85,31 @@ This hybrid strategy combines:
 
 
 ## Project Structure
-
 ```text
-├── experiments/
-│   └── LongBench/
-│       ├── eval.py           # Evaluation script
-│       ├── metrics.py        # Metric computation
-│       └── pred_sakv.py      # SAKV inference entry
+├── README.md                       # Project overview, setup, and usage
+├── REBUTTAL_ICDE.md                # Additional ICDE rebuttal experiments
+├── requirements.txt                # Python dependencies
 │
-├── model/
-│   └── modify_mistral.py     # Model modifications / patching
+├── source_code/                    # Core SAKV implementation
+│   ├── __init__.py                 # Package initialization
+│   ├── sakv_cache.py               # Core SAKV KV-cache logic
+│   ├── monkeypatch.py              # Runtime attention/model patching
+│   ├── utils.py                    # Semantic processing utilities
+│   │
+│   └── model/                      # Model-specific modifications
+│       └── modify_mistral.py       # Mistral attention modifications
 │
-├── sakv_cache.py             # Core SAKV KV cache logic
-├── monkeypatch.py            # Runtime patch for model attention
-├── utils.py                  # Utility functions
-├── __init__.py
-└── README.md
+└── experiments/                    # Evaluation and reproduction scripts
+    └── LongBench/
+        ├── eval.py                 # LongBench evaluation script
+        ├── metrics.py              # Evaluation metrics
+        └── pred_sakv.py            # SAKV inference entry
+```
+
+- **`source_code/`** contains the core implementation of SAKV and model-specific attention modifications.
+- **`experiments/LongBench/`** contains the scripts required to run inference and evaluate SAKV on LongBench.
+- **`REBUTTAL_ICDE.md`** presents the additional experiments and analyses provided in response to the ICDE reviewers.
+- **`requirements.txt`** lists the dependencies required to reproduce the experiments.
 
 ▶️ Running LongBench Evaluation
 Currently tested with transformers==4.44.2
