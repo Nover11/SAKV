@@ -1,4 +1,4 @@
-# SAKV: Anonymous Source Artifact
+# SAKV
 
 SAKV uses semantic redundancy in the prompt to guide **layer-wise cache allocation** and **token-level KV eviction**. Semantic units are temporary prefill-time probes: the retained cache contains ordinary token-indexed key/value states.
 
