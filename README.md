@@ -2,7 +2,7 @@
 
 SAKV uses semantic redundancy in the prompt to guide **layer-wise cache allocation** and **token-level KV eviction**. Semantic units are temporary prefill-time probes: the retained cache contains ordinary token-indexed key/value states.
 
-[Method](#method) · [Installation](#installation) · [LongBench evaluation](#longbench-evaluation) · [Implementation and validation](#implementation-and-validation)
+[Method](#method) · [Installation](#installation) · [LongBench evaluation](#longbench-evaluation) · [Implementation](#implementation)
 
 ## Method
 
@@ -124,7 +124,7 @@ docs/VALIDATION.md             Checks performed and validation limitations
 
 The `cake` namespace is retained to avoid a broad rename of the implementation derived from CAKE. New user-facing imports use `sakv`, for example `from sakv import SAKVPrefillKVCache`. CAKE baseline names remain distinct from the proposed SAKV method.
 
-## Implementation and validation
+## Implementation
 
 The source includes semantic scoring, layer-wise cache allocation, model patches,
 and the installation/evaluation entrypoints. Run configurations must explicitly
